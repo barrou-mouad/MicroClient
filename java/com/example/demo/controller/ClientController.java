@@ -77,5 +77,10 @@ public Client getByode(@PathVariable String code) {
 }
 
 
+@GetMapping("clientDelete/{code}")
+public void deleteByode(@PathVariable String code) {	
+	 clientService.delete(code);
+}
+
 
 }
