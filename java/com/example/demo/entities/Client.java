@@ -28,33 +28,20 @@ public void setCodeClient(String codeClient) {
 }
 private String prenom;
 private String email;
-
-@DBRef(lazy = true)
-
-private  List<Account> accounts=new ArrayList<Account>();
-public Client( String nom, String prenom, String codeClient, String email,List<Account> accounts) {
+public Client( String nom, String prenom, String codeClient, String email) {
 	super();
 	this.codeClient = codeClient;
 	this.nom = nom;
 	this.prenom = prenom;
 	this.email = email;
-    this.accounts=accounts;
+
 }
-
-
-
-
-
 public String getId() {
 	return id;
 }
-
-
 public void setId(String id) {
 	this.id = id;
 }
-
-
 public String getNom() {
 	return nom;
 }
@@ -72,16 +59,4 @@ public String getEmail() {
 }
 public void setEmail(String email) {
 	this.email = email;
-}
-
-
-public List<Account> getAccounts() {
-	return accounts;
-}
-public void setAccounts(List<Account> accounts) {
-	this.accounts = accounts;
-}
-
-
-
-}
+}}
